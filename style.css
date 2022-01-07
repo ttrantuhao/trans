@@ -646,7 +646,7 @@ ul li {
 
 @media screen and (max-width: 1400px) {
   body {
-    background-color: red;
+    /* background-color: red; */
     font-size: 14px;
   }
 
@@ -683,7 +683,7 @@ ul li {
 
 @media screen and (max-width: 1024px) {
   body {
-    background-color: green;
+    /* background-color: green; */
   }
   .word-such-bg {
     height: 50vh;
@@ -713,7 +713,7 @@ ul li {
   body {
     --padding: 100px;
     --padding: 32px;
-    background-color: blue;
+    /* background-color: blue; */
   }
   .sleek {
     width: 80%;
@@ -796,7 +796,7 @@ ul li {
 
 @media screen and (max-width: 576px) {
   body {
-    background-color: white;
+    /* background-color: white; */
     --margin-section: 80px;
   }
   .menu-bar {
