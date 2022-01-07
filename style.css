@@ -833,6 +833,9 @@ ul li {
     display: grid;
     grid-template-columns: auto auto;
   }
+  .footer .quote {
+    margin-right: 0px;
+  }
 }
 
 /* animation */
