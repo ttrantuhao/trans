@@ -26,7 +26,12 @@
         </ul>
       </nav>
       <nav class="menu-burger">
-        <img src="/images/burger.png" alt="burger" onclick="clickBurger()" />
+        <div id="burger-icon" onclick="clickBurger()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul id="burger-list">
           <li><a href="#">about</a></li>
           <li><a href="#">product</a></li>
@@ -307,21 +312,33 @@
     <script>
       function clickBurger() {
         const list = document.getElementById('burger-list');
-        if (list.style.transform === 'scaleY(1)') {
-          list.style.transform = 'scaleY(0)';
+        const icon = document.getElementById('burger-icon');
+        const header = document.getElementById('header');
+
+        icon.classList.toggle('open');
+        header.classList.add('header-white');
+
+        if (list.style.transform === 'scale(1)') {
+          list.style.transform = 'scale(0)';
+          if (window.scrollY < 10) {
+            header.classList.remove('header-white');
+          }
         } else {
-          list.style.transform = 'scaleY(1)';
+          list.style.transform = 'scale(1)';
         }
       }
     </script>
     <script>
       window.onscroll = function () {
         const headerBar = document.getElementById('header');
-
-        if (window.scrollY < 10) {
-          headerBar.classList.remove('header-white');
-        } else {
+        const icon = document.getElementById('burger-icon');
+        // console.log(icon.classList.);
+        if (window.scrollY > 10) {
           headerBar.classList.add('header-white');
+        } else {
+          if (!icon.classList.contains('open')) {
+            headerBar.classList.remove('header-white');
+          }
         }
       };
     </script>
