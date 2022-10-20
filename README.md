@@ -1,3 +1,3 @@
 # trans
 
-Demo link: trantuhao-trans.surge.sh
+Demo: https://trantuhao-trans.surge.sh/
